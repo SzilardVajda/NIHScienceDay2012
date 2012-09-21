@@ -1,0 +1,363 @@
+% Poster created for ScienceDay2012
+%
+% @author Szilard VAJDA
+% @date   2012 September 13
+
+\documentclass[landscape,a0,final]{a0poster}
+%\documentclass[portrait,a0,final]{a0poster}
+%\documentclass[landscape,a0,posterdraft]{a0poster}
+
+%\renewcommand{\tiny}{\fontsize{12}{14}\selectfont}
+
+%\renewcommand{\scriptsize}{\fontsize{14.4}{18}\selectfont}
+
+%\renewcommand{\footnotesize}{\fontsize{17.28}{22}\selectfont}
+
+%\renewcommand{\small}{\fontsize{20.74}{25}\selectfont}
+
+%\renewcommand{\normalsize}{\fontsize{24.88}{30}\selectfont}
+
+%\renewcommand{\large}{\fontsize{29.86}{37}\selectfont}
+
+%\renewcommand{\Large}{\fontsize{35.83}{45}\selectfont}
+
+%\renewcommand{\LARGE}{\fontsize{43}{54}\selectfont}
+
+%\renewcommand{\huge}{\fontsize{51.6}{64}\selectfont}
+
+%\renewcommand{\Huge}{\fontsize{61.92}{77}\selectfont}
+
+%\newcommand{\veryHuge}{\fontsize{74.3}{93}\selectfont}
+
+%\newcommand{\VeryHuge}{\fontsize{89.16}{112}\selectfont}
+
+%\newcommand{\VERYHuge}{\fontsize{107}{134}\selectfont}
+% As info the paper sizes:
+%format  	paper size 	.ps bounding box size (portrait)
+%A0 841 � 1189 mm	0 0 2383 3370
+%A0b 841 x 
+%A1 595 � 841 mm 0 0 1685 2383
+%A2 420 � 595 mm 0 0 1192 1685
+%A3 297 � 420 mm 0 0 842 1192
+%A4 210 � 297 mm 0 0 595 842
+
+\usepackage[american]{babel} 
+%\usepackage[paper=a0paper,landscape,noheadfoot,left=1cm,top=1cm,right=1cm,nohead,nofoot]{geometry}
+
+\usepackage[paper=a0paper,landscape,left=1cm,top=1cm,right=1cm,nohead]{geometry}
+
+\usepackage{setspace} % stretch of baselineskip 
+\usepackage{graphicx}
+\usepackage{sectionbox}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage[babel]{csquotes} % allow changing the quotation style
+\usepackage[none]{hyphenat} % option 'none' to prevent any hyphenation throughout the document
+\usepackage{pgfplots}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{textpos}
+
+\input{a0poster-tudo}
+
+\definecolor{seprulecolor}{gray}{0.95}
+
+%\definecolor{tugreen1}{rgb}{.52,.72,.10}	% 84b819
+\definecolor{tugreen1}{rgb}{.105,.239,.478}	% 84b819
+\newcommand{\tugreen}[1]{{\color{tugreen1}{#1}}}
+
+\definecolor{sectboxfillcol}{rgb}{1,1,1}
+\definecolor{sectboxrulecol}{rgb}{.105,.239,.478}
+\definecolor{shadowcolor}{gray}{0.30}
+\newcommand{\shadowcolor}{shadowcolor}
+\setlength{\shadowsize}{4pt}
+
+%\newcommand{\Content}{\fontsize{36}{39}\selectfont} % f�r a0
+%\newcommand{\Heading}{\fontsize{60}{75}\selectfont}
+%\newcommand{\Authors}{\fontsize{43}{54}\selectfont} 
+%%\newcommand{\Authors}{\Content} 
+%%\newcommand{\Institutes}{\fontsize{43}{54}\selectfont} 
+%%\newcommand{\Subtitle}{\fontsize{45}{58}\selectfont}
+%\newcommand{\Institutes}{\Content} 
+%\newcommand{\Caption}{\fontsize{30}{33}\selectfont}
+%\newcommand{\Tabular}{\fontsize{24}{26}\selectfont} % f�r a0
+%\newcommand{\Titlesize}{\fontsize{45}{58}\selectfont}
+%\newcommand{\Subtitlesize}{\fontsize{36}{39}\selectfont}
+
+\newcommand{\Content}{\normalsize} % f�r a0
+\newcommand{\Heading}{\fontsize{60}{75}\selectfont}
+\newcommand{\Authors}{\LARGE} 
+%\newcommand{\Authors}{\Content} 
+%\newcommand{\Institutes}{\fontsize{43}{54}\selectfont} 
+%\newcommand{\Subtitle}{\fontsize{45}{58}\selectfont}
+\newcommand{\Institutes}{\Large} 
+\newcommand{\Caption}{\fontsize{30}{33}\selectfont}
+\newcommand{\Tabular}{\fontsize{24}{26}\selectfont} % f�r a0
+\newcommand{\Titlesize}{\large}
+\newcommand{\Subtitlesize}{\normalsize}
+
+\newcommand{\textsubscript}[1]{$_\mathrm{#1}$}
+
+% make everything ultra-compact by eliminating most spaces ...
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\topsep}{0pt}
+\setlength{\partopsep}{0pt}
+% ... and readjust some exceptions
+%\parskip 5.0ex
+\parskip 2.5ex
+
+
+\renewcommand{\rmdefault}{phv}
+\renewcommand{\familydefault}{\sfdefault}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definition of some variables and colors
+%\renewcommand{\rho}{\varrho}
+%\renewcommand{\phi}{\varphi}
+\setlength{\columnsep}{1.5cm}
+\setlength{\columnseprule}{2mm}
+\setlength{\parindent}{0.0cm}
+
+\renewcommand{\columnseprulecolor}{\color{seprulecolor}}
+
+\setdescription{font=\sffamily\bfseries}
+%\setitemize[1]{label={\Caption$\bullet$}}
+%\setitemize[2]{label={\Caption$\bullet$}}
+%\setitemize[3]{label={\Caption$\bullet$}}
+%\setitemize[1]{label={\Content$\bullet$}}
+%\setitemize[2]{label={\Content$\bullet$}}
+%\setitemize[3]{label={\Content$\bullet$}}
+\setitemize[1]{label={\Content\textbullet}}
+\setitemize[2]{label={\Content\textbullet}}
+\setitemize[3]{label={\Content\textbullet}}
+%\setitemize[1]{label=$\circ$}
+%\setitemize[2]{label=$\circ$}
+%\setitemize[3]{label=$\circ$}
+
+\newcommand{\itemarrow}{$\Rightarrow$\hspace{-0.2cm}}
+
+% for labeled itemize environments
+%\newcommand\litem[1]{\item{\bfseries #1,\enspace}}
+\newcommand\litem[1]{\item{\sffamily\bfseries #1\enspace}}
+
+% to (manually) control the layout of items (especially the spacing) in descriptions
+%\newcommand\ditem[2]{\item[1]{\enspace#1}}
+\newcommand\ditem[1][~]{\item[#1\enspace]}
+
+%\newenvironment{descreplace}{\begin{itemize}[align=right,leftmargin=6cm,font=\sffamily\bfseries]}{\end{itemize}}
+\newlength\descreplacemargin
+\setlength{\descreplacemargin}{5.5cm}
+\newenvironment{descreplace}[1][\descreplacemargin]{%
+	\begin{itemize}[align=right,leftmargin=#1,font=\sffamily\bfseries]%
+}{%
+	\end{itemize}
+}
+
+\shadowsectionbox
+\shadowsubsectionbox
+
+\newenvironment{xsectionbox}[3][\columnwidth]{% default width of minipage is \columnwidth
+\setlength{\fboxsep}{0.5\fboxrule}% ensures colorbox is filled up to boundary of sectionbox 
+\begin{lrbox}{\sectsavebox} % open lrbox and save in \sectsavebox
+\begin{minipage}{#1-2\colboxsep-3\fboxrule}
+\color{sectboxtextcol}%
+%\ifthenelse{\equal{#2}{}}{}{\section{#2}}%  only produce section if mandatory parameter not empty
+%\ifthenelse{\equal{#3}{}}{}{#3}%  only produce section if mandatory parameter not empty
+\ifthenelse{\equal{#2}{}}{}{{\vspace*{0.2cm}\noindent\hspace*{0.2cm}{\bf\Titlesize #2}\newline}}%  only produce title if mandatory parameter not empty
+\ifthenelse{\equal{#3}{}}{%
+\ifthenelse{\equal{#2}{}}{}{\vspace{-0.75cm}}%
+}{%
+{\noindent\hspace*{0.2cm}{\bf\Titlesize #3}\newline}\vspace{-0.75cm}%
+}%  only produce subtitle if mandatory parameter not empty
+%\vspace{-0.75cm}
+}{%
+%\vspace*{0.1cm}
+\end{minipage}
+\end{lrbox}                                  % close lrbox
+  \color{sectboxrulecol}                     % sets color of boundary
+  \noindent
+  \makesectionbox{\setlength{\fboxsep}{\colboxsep}\colorbox{sectboxfillcol}{\usebox{\sectsavebox}}}               
+  \\[\sectboxskip]
+}
+
+\newenvironment{xpsectionbox}[3][\columnwidth]{% default width of minipage is \columnwidth
+\setlength{\fboxsep}{0.5\fboxrule}% ensures colorbox is filled up to boundary of sectionbox 
+\begin{lrbox}{\sectsavebox} % open lrbox and save in \sectsavebox
+\begin{minipage}{#1-2\colboxsep-3\fboxrule}
+\color{sectboxtextcol}%
+%\ifthenelse{\equal{#2}{}}{}{\section{#2}}%  only produce section if mandatory parameter not empty
+%\ifthenelse{\equal{#3}{}}{}{#3}%  only produce section if mandatory parameter not empty
+\ifthenelse{\equal{#2}{}}{}{{\vspace*{0.2cm}\noindent\hspace*{0.2cm}{\bf\Titlesize #2}\newline}}%  only produce title if mandatory parameter not empty
+\ifthenelse{\equal{#3}{}}{}{{\noindent\hspace*{0.2cm}{\bf\Titlesize #3}\newline}}%  only produce subtitle if mandatory parameter not empty
+
+\begin{minipage}{1.0\linewidth}
+}{%
+\end{minipage}
+%\vspace*{0.1cm}
+\end{minipage}
+\end{lrbox}                                  % close lrbox
+  \color{sectboxrulecol}                     % sets color of boundary
+  \noindent
+  \makesectionbox{\setlength{\fboxsep}{\colboxsep}\colorbox{sectboxfillcol}{\usebox{\sectsavebox}}}               
+  \\[\sectboxskip]
+}
+
+\newcommand{\xpartbox}[1]{%
+	%\renewcommand{\sectboxfillcol}{\tugreen}
+	\definecolor{sectboxfillcol}{rgb}{.105,.239,.478}
+	\begin{xsectionbox}{}{}
+		\begin{center}
+		{\Large \bf \color{white} #1}	
+		\end{center}
+	\end{xsectionbox}
+	\definecolor{sectboxfillcol}{rgb}{1.,1.,1.}
+}
+
+\newlength{\mytablespace}
+\setlength{\mytablespace}{0.25cm}
+\newenvironment{mytable}[1][\mytablespace]{%
+	\newcommand*{\fuckthatlatexcrap}{#1}
+	\nobreak\vspace*{\fuckthatlatexcrap}
+	\begin{center}
+}{%
+	\end{center}
+	\nobreak\vspace*{\fuckthatlatexcrap}
+}
+
+\newcommand{\opt}{\operatornamewithlimits{opt}}
+\newcommand{\sgn}{\operatornamewithlimits{sgn}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\def\bigdot{\ensuremath{\bullet}}        % dicker schwarzer Punkt
+\def\cel{\ensuremath{^{\circ}C}}         % Grad Celsius
+\def\grad{\ensuremath{^\circ}}           % Grad
+\def\degree{\ensuremath{^\circ}}         % Grad
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Begin of Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{header}
+%%%
+% DSS in the corner (for ICMI doctoral spotlight session)
+%%%
+% A0 841 � 1189 mm	0 0 2383 3370
+%\begin{textblock*}{2.5cm}(1095mm,795mm)
+%\begin{textblock*}{2.5cm}(1095mm,805mm)
+%\begin{textblock*}{2.5cm}(1105mm,805mm)
+\begin{textblock*}{2.5cm}(1095mm,785mm)
+	\begin{minipage}[b]{7.5cm}
+		\begin{flushright}
+			{ \bf \fontsize{60}{75}\selectfont\noindent CEB\noindent }
+			%{ \bf \Large DSS }
+		\end{flushright}
+	\end{minipage}
+\end{textblock*}
+%\vspace{-2.5cm} % -- subtract the allocated textblock height
+
+%%%
+% DSS in the corner (for ICMI doctoral spotlight session)
+%%%
+% A0 841 � 1189 mm	0 0 2383 3370
+%\begin{textblock*}{2.5cm}(10mm,785mm)
+%\begin{textblock*}{2.5cm}(10mm,795mm)
+%\begin{textblock*}{2.5cm}(10mm,805mm)
+\begin{textblock*}{2.5cm}(10mm,785mm)
+	\begin{minipage}[b]{14.5cm}
+		\begin{flushleft}
+			{ \bf \footnotesize\selectfont {\noindent $26^{th}$ Annual NIH Research Festival\\ \noindent Bethesda,MD, USA, 2012 October 9-12\\[0mm]} }
+		\end{flushleft}
+	\end{minipage}
+\end{textblock*}
+\vspace*{-2.5cm} % -- subtract the allocated textblock height
+
+%%%
+% Logos
+%%%
+\begin{minipage}[t]{0.24\textwidth}
+  \par\vspace*{-2.5em}
+  %\vspace*{-3em}
+  %\hspace*{-40cm}
+	\begin{flushleft}
+		%\includegraphics[height=4cm]{images/tud_logo_rgb.jpg}%
+		\includegraphics[height=6cm]{images/nlm_logo.jpg}
+	\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \begin{center}
+  
+
+    { \bf \veryHuge {FaceMatch: Visual Search for Pictures of Missing Persons During a Disaster Event} }
+  \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.24\textwidth}
+	\par\vspace*{-2.5em}
+	%\vspace*{-2.5em}
+	%\hspace*{-4cm}
+	\begin{flushright}
+ 		%\includegraphics[height=4cm]{images/tu_inf_logo.png}
+ 		%\includegraphics[height=5cm]{images/fbi_logo_de.pdf}%
+ 		\includegraphics[height=6cm]{images/nih_logo.jpg}
+	\end{flushright}
+\end{minipage}
+
+%%%
+% Titel
+%%%
+\vspace*{-2cm}
+\begin{center}
+	\begin{minipage}[t]{0.95\textwidth}
+		\begin{center}
+			%{ \bf \Heading \textsc{Multi-Modal and Multi-Camera Attention \\ in Smart Environments\\[10mm]}}
+			\vspace{2cm}
+			{\Authors Eugene Borovikov, Szil\'{a}rd Vajda, Girish Lingappa, Sameer Antani, Mike Gill, George Thoma}
+			\vspace{1cm}
+			{	\Institutes \centerline{ Communications Engineering Branch,  Lister Hill National Center for Biomedical Communications, U.S. National Library of Medicine, Bethesda, MD, 20894, USA}}
+		\end{center}
+	\end{minipage}
+\end{center}
+
+\end{header}
+
+%Szilard
+\vspace*{1cm}
+%\vspace*{0.25cm}
+
+\begin{poster}
+
+%%% Begin of Multicols-Enviroment
+\begin{multicols}{3}
+
+\input{abstract}
+
+\input{near_duplicates}
+
+\vspace{2cm}  
+\input{face_detection}
+
+\vspace{1cm}  
+\input{face_matching}
+
+\input{conclusion}
+
+%%
+%%%\newpage
+%\columnbreak 
+%\begin{pcolumn}{0.3}
+%%%\input{evaluation}
+
+%%%\input{conclusion}
+%\end{pcolumn}
+
+\end{multicols}
+\end{poster}
+\end{document}
+
+
