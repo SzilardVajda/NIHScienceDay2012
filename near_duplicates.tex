@@ -2,17 +2,18 @@
 
 \begin{xpsectionbox}{Description}{}
 
-The raw data-set contains fairly many duplicate images due to multiple postings of the same photograph. Such duplicates (or near-duplicates) need to be identified and collected in bunches that would be represented by the highest quality images.
+An image data-set may contain many near-duplicate images due to multiple postings of the same photograph rescaled or re-compressed. Such near-duplicates need to be identified and collected in groups that would be represented by the highest quality image.
 
-\begin{minipage}{0.4\linewidth}
+\begin{minipage}{0.6\linewidth}
 
 \begin{itemize}
-	  \item Haar wavelets computations
-	  \item distance measure definition (threshold)
-	  \item champion selection (highest resolution)
+	\item Haar wavelet based image descriptor: most significant coefs
+	\item real-valued distance measure in $[0,1]$, 0 being perfect match
+	\item low threshold for \emph{near}-duplicate detection
+	\item champion selection: highest resolution
 \end{itemize}
 \end{minipage}
-\begin{minipage}{0.6\linewidth}
+\begin{minipage}{0.5\linewidth}
 
 \begin{center}
 %			%\hspace{-5cm}
@@ -102,12 +103,10 @@ The raw data-set contains fairly many duplicate images due to multiple postings 
 \xpartbox{Experiments}
 
 \begin{xpsectionbox}{Results}{}
-
+Number of near-duplicates in data-sets % TODO: a table may work better
 \begin{itemize}
-	\item Data (HEPL(x), PL(y), AFLW(z))
-	\item Difficulties (quality, lighting, occlusion, no annotation, etc.)
-	\item Result for HEPL: x\% duplicates
-	\item Result for PL: y\% duplicates 
-		
+	\item HEPL: 6K near-dups in 15K images
+	\item PL: 4K near-dups in 12K images
 \end{itemize}
+We have also experimented with generating about 800 near-duplicates from a set of 132 unique images by scaling (s=0.5, 2), rotating (a=π/12) and cropping (c=0.8, 0.65). Our near-duplicate detector is most sensitive to rotations and cropping, detecting very few of those, while detecting most of the scaled near-duplicates correctly. This result was rather expected, given the Haar wavelet nature of the detector.
 \end{xpsectionbox}
