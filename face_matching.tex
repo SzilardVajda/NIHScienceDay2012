@@ -105,13 +105,19 @@ Improvements:
 \xpartbox{Experiments}
 
 \begin{xpsectionbox}{Results}{}
+Our experiments with the annotated HEPL-4K images, and on HEPL-62mod (372 = 62 images with 6 synthetic modifications, e.g. crop, scale and rotate). Accuracy (F-score) figures are reported in the table.
 
-\begin{itemize}
-	\item Data (HEPL(x), PL(y), AFLW(z))
-	\item Difficulties (quality, lighting, occlusion, etc)
-	
-		
-\end{itemize}
+\begin{tabular*}{0.75\textwidth}{@{\extracolsep{\fill}} | c | c | c | c | c | }
+  \hline
+  dataset & HAAR & SIFT & SURF & ORB \\
+  \hline
+  HEPL-4K & {\bf0.99} & 0.98 & 0.96 & 0.95 \\
+  \hline
+  HEPL-62mod  & 0.44  & {\bf0.81}  & 0.52 & 0.56 \\
+  \hline
+\end{tabular*}
+
+We have also experimented with combining the descriptor match distances by using a generalized geometric mean, and found that a combination of HAAR*ORB*SIFT*SURF produce a better F score (by about 5 percentage points), than either of them. Inclusion of a weak descriptor may hurt the ensemble.
 \end{xpsectionbox}
 
 %\xpartbox{Automatic Bangla Recognition}

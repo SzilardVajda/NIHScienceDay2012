@@ -110,14 +110,15 @@ Advantages
 \xpartbox{Experiments}
 
 \begin{xpsectionbox}{Results}{}
+With no modifications, Viola-Jones face detector misses about half of the HEPL faces, and about 20\% of the missed ones are typically too small for matching purposes.
 
+Accuracy results of our FaceFinder
 \begin{itemize}
 	\item HEPL-300: R=75\%, P=83\%, F=79\%
-	\item Difficulties (quality, lighting, occlusion, etc)
-	\item Result without skin: a\%
-	\item Results with skin: a + 10\%
-		
+	\item HEPL-4K (noisy): F=53\%
+	\item PL-700nd+skin: 46\% Recall boost with 22\% FP rate
 \end{itemize}
+The major factors hurting the accuracy are: Lighting=5.3\%; Quality=8.8\%; Occlusion=10.8\%; Color=0.6\%; Combination=9.5\%; Small Faces=20.8\%; Other=44.2\%.
 \end{xpsectionbox}
 
 

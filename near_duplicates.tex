@@ -7,8 +7,8 @@ An image data-set may contain many near-duplicate images due to multiple posting
 \begin{minipage}{0.6\linewidth}
 
 \begin{itemize}
-	\item Haar wavelet based image descriptor: most significant coefs
-	\item real-valued distance measure in $[0,1]$, 0 being perfect match
+	\item Haar wavelet based descriptor: most significant wavelet coefs
+	\item real-valued distance measure in $[0,1]$, with 0 = perfect match
 	\item low threshold for \emph{near}-duplicate detection
 	\item champion selection: highest resolution
 \end{itemize}
@@ -108,5 +108,5 @@ Number of near-duplicates in data-sets % TODO: a table may work better
 	\item HEPL: 6K near-dups in 15K images
 	\item PL: 4K near-dups in 12K images
 \end{itemize}
-We have also experimented with generating about 800 near-duplicates from a set of 132 unique images by scaling (s=0.5, 2), rotating (a=π/12) and cropping (c=0.8, 0.65). Our near-duplicate detector is most sensitive to rotations and cropping, detecting very few of those, while detecting most of the scaled near-duplicates correctly. This result was rather expected, given the Haar wavelet nature of the detector.
+We have also experimented with generating about 800 near-duplicates from a set of 132 unique images by scaling ($s=0.5, 2$), rotating ($\alpha=\pm\pi/12$) and cropping ($c=0.8, 0.65$). Our near-duplicate detector is most sensitive to rotations and cropping, detecting very few of those, while detecting most of the scaled near-duplicates correctly. This result was rather expected, given the Haar wavelet nature of the detector.
 \end{xpsectionbox}
