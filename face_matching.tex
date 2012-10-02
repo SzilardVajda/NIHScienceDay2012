@@ -25,25 +25,25 @@ Localized face/profile regions  need to be matched against a query face/profile 
 %\end{minipage}
 \end{xpsectionbox}
 
-\begin{xpsectionbox}{Challenges}{}
-
-\begin{minipage}{0.4\linewidth}
-\begin{itemize}
-	  \item local descriptors (Haar, SIFT, SURF, ORB)
-	  \item low-quality images
-	  \item various lighting conditions
-	  \item frontal vs. profile faces
-	  \item occlusions, facial hair, spectacles, hat, etc.
-\end{itemize}
-\end{minipage}
-\begin{minipage}{0.6\linewidth}
-\begin{center}
-			\vspace{-2cm}
-			\includegraphics[height=0.45\linewidth]{images/face_match_sift}
-\end{center}
-\end{minipage}
-
-\end{xpsectionbox}
+%\begin{xpsectionbox}{Challenges}{}
+%
+%\begin{minipage}{0.4\linewidth}
+%\begin{itemize}
+%	  \item local descriptors (Haar, SIFT, SURF, ORB)
+%	  \item low-quality images
+%	  \item various lighting conditions
+%	  \item frontal vs. profile faces
+%	  \item occlusions, facial hair, spectacles, hat, etc.
+%\end{itemize}
+%\end{minipage}
+%\begin{minipage}{0.6\linewidth}
+%\begin{center}
+%			\vspace{-2cm}
+%			\includegraphics[height=0.45\linewidth]{images/face_match_sift}
+%\end{center}
+%\end{minipage}
+%
+%\end{xpsectionbox}
 
 \xpartbox{Solution}
 
@@ -52,7 +52,9 @@ Localized face/profile regions  need to be matched against a query face/profile 
 
 
 \begin{minipage}{0.5\linewidth}
-Method
+
+{\vspace*{0.2cm}\noindent\hspace*{0.2cm}{\bf\Titlesize Method}\newline}{\vspace{-0.75cm}}
+
 \begin{itemize}
 	  \item Haar/SIFT/SURF/ORB
 	  \item rotation invariant metrics
@@ -73,7 +75,9 @@ Method
 
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
-Improvements:
+
+{\vspace*{0.2cm}\noindent\hspace*{0.2cm}{\bf\Titlesize Improvements}\newline}{\vspace{-0.75cm}}
+
 \begin{itemize}
 	  \item re-ranking based on
 	  	\begin{itemize}
@@ -104,7 +108,7 @@ Improvements:
 
 \xpartbox{Experiments}
 
-\begin{xpsectionbox}{Results}{}
+\begin{xpsectionbox}{}{}
 Our experiments with the annotated HEPL-4K images, and on HEPL-62mod (372 = 62 images with 6 synthetic modifications, e.g. crop, scale and rotate). Accuracy (F-score) figures are reported in the table.
 
 \begin{tabular*}{0.75\textwidth}{@{\extracolsep{\fill}} | c | c | c | c | c | }
