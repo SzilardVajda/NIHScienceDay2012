@@ -1,9 +1,9 @@
 
 \xpartbox{Face Matching}
 
-\begin{xpsectionbox}{Description}{}
+\begin{xpsectionbox}{}{}
 
-Localized face/profile regions  need to be matched against a query face/profile picture, which may come from an existing (and possibly annotated) image, or from a new photograph, that face matcher has not seen before. Hence the face matching method needs to be approximate to accommodate wide variations in the appearance, yet it needs to be fairly exact to eliminate numerous false positive hits.
+Once the face/profile regions in the image collection are localized and their descriptors are indexed, they can be matched against a query face/profile picture, which may come from an existing (possibly annotated) image, or from a new photograph, that FaceMatcher has not seen before. Hence the face matching method needs to be robust to accommodate wide variations in the appearance, and it needs to be fairly exact to eliminate numerous false positive hits.
 
 %\begin{minipage}{0.4\linewidth}
 %
@@ -50,59 +50,35 @@ Localized face/profile regions  need to be matched against a query face/profile 
 %--------------------------------------------------------------------------------------------------------------------
 \begin{xpsectionbox}{}{}
 
-
-\begin{minipage}{0.5\linewidth}
-
+\begin{minipage}{0.37\linewidth}
 {\vspace*{0.2cm}\noindent\hspace*{0.2cm}{\bf\Titlesize Method}\newline}{\vspace{-0.75cm}}
-
 \begin{itemize}
-	  \item Haar/SIFT/SURF/ORB
-	  \item rotation invariant metrics
-	  \item ...
+	\item localized face/profile
+	\item Haar/SIFT/SURF/ORB descriptors
+	\item scale invariant metrics
+	\item distance range $[0,1]$
+	\begin{itemize}
+		\item 0 = perfect match
+		\item 1 = complete mismatch
+	\end{itemize}
 \end{itemize}
-\begin{center}
-			\includegraphics[height=0.25\linewidth]{images/face_sift}
-\end{center}
-
-%\bf{Drawbacks:}
-%\begin{itemize}
-%	  \item small size faces not detectable
-%	  \item lighting/occlusion deteriorates results 
-%\end{itemize}
-%\begin{center}
-%			\includegraphics[height=0.25\linewidth]{images/Haar_features}
-%\end{center}
-
 \end{minipage}
-\begin{minipage}{0.5\linewidth}
-
-{\vspace*{0.2cm}\noindent\hspace*{0.2cm}{\bf\Titlesize Improvements}\newline}{\vspace{-0.75cm}}
-
-\begin{itemize}
-	  \item re-ranking based on
-	  	\begin{itemize}
-	  		\item Borda count
-	  		\item weighted Borda count
-	  		\item distances
-	  	\end{itemize}
-	  \item fast indexing (tree structure)
-	  \item ...
-\end{itemize}
+\begin{minipage}{0.25\linewidth}
 \begin{center}
-			%\includegraphics[height=0.2\linewidth]{images/Lena_RGB}
-			%\includegraphics[height=0.2\linewidth]{images/Lena_LAB}
-			%\includegraphics[height=0.2\linewidth]{images/Lena_HSV}
-			%\includegraphics[height=0.2\linewidth]{images/Lena_LUV}
+	\includegraphics[width=0.5\linewidth]{images/face_match_sift}
 \end{center}
-%\bf{Advantages:}
-%\begin{itemize}
-%	  \item high precision skin detection(91\%)  
-%	  \item skin maps focus the face finding
-%	  \item enhance skin region intensities
-%\end{itemize}
-%\begin{center}
-%			\includegraphics[height=0.2\linewidth]{images/Haar_features}
-%\end{center}
+\end{minipage}
+\begin{minipage}{0.37\linewidth}
+{\vspace*{0.2cm}\noindent\hspace*{0.2cm}{\bf\Titlesize Improvements}\newline}{\vspace{-0.75cm}}
+\begin{itemize}
+	\item re-ranking based on
+	\begin{itemize}
+		\item distance average
+		\item Borda count
+	\end{itemize}
+	\item stronger descriptors weigh more
+	\item downplay weak matches
+\end{itemize}
 \end{minipage}
 \end{xpsectionbox}
 
@@ -121,7 +97,7 @@ Our experiments with the annotated HEPL-4K images, and on HEPL-62mod (372 = 62 i
   \hline
 \end{tabular*}
 
-We have also experimented with combining the descriptor match distances by using a generalized geometric mean, and found that a combination of HAAR*ORB*SIFT*SURF produce a better F score (by about 5 percentage points), than either of them. Inclusion of a weak descriptor may hurt the ensemble.
+We have also experimented with combining the descriptor match distances by using a generalized geometric mean, and found that a combination of HAAR*ORB*SIFT*SURF produce a better F-score (by about 5 percentage points) than either of the individual descriptors. Inclusion of a weak descriptor may hurt the ensemble.
 \end{xpsectionbox}
 
 %\xpartbox{Automatic Bangla Recognition}
