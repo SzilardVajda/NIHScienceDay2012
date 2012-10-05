@@ -3,7 +3,11 @@
 % @author Szilard VAJDA, Eugene Borovikov
 % @date   2012 September 13
 
-\documentclass[landscape,a0,final]{a0poster}
+%\documentclass[landscape,a1,final]
+
+% A1 size
+\documentclass[landscape,a1]{a0poster}
+% A0 size
 %\documentclass[portrait,a0,final]{a0poster}
 %\documentclass[landscape,a0,posterdraft]{a0poster}
 
@@ -42,9 +46,9 @@
 %A4 210 � 297 mm 0 0 595 842
 
 \usepackage[american]{babel} 
-%\usepackage[paper=a0paper,landscape,noheadfoot,left=1cm,top=1cm,right=1cm,nohead,nofoot]{geometry}
+\usepackage[paper=a0paper,landscape,noheadfoot,left=1cm,top=1cm,right=1cm,nohead,nofoot]{geometry}
 
-\usepackage[paper=a0paper,landscape,left=1cm,top=1cm,right=1cm,nohead]{geometry}
+%\usepackage[paper=a0paper,landscape,left=1cm,top=1cm,right=1cm,nohead]{geometry}
 
 \usepackage{setspace} % stretch of baselineskip 
 \usepackage{graphicx}
@@ -247,9 +251,10 @@
 % DSS in the corner (for ICMI doctoral spotlight session)
 %%%
 % A0 841 � 1189 mm	0 0 2383 3370
+% %A1 595 � 841 mm 0 0 1685 2383
 %\begin{textblock*}{2.5cm}(1095mm,795mm)
 %\begin{textblock*}{2.5cm}(1095mm,805mm)
-%\begin{textblock*}{2.5cm}(1105mm,805mm)
+%\begin{textblock*}{2.5cm}(841mm,595mm)
 \begin{textblock*}{2.5cm}(1095mm,785mm)
 	\begin{minipage}[b]{7.5cm}
 		\begin{flushright}
@@ -267,10 +272,11 @@
 %\begin{textblock*}{2.5cm}(10mm,785mm)
 %\begin{textblock*}{2.5cm}(10mm,795mm)
 %\begin{textblock*}{2.5cm}(10mm,805mm)
+%\begin{textblock*}{2.5cm}(10mm,585mm)
 \begin{textblock*}{2.5cm}(10mm,785mm)
 	\begin{minipage}[b]{14.5cm}
 		\begin{flushleft}
-			{ \bf \footnotesize\selectfont {\noindent $26^{th}$ Annual NIH Research Festival\\ \noindent Bethesda,MD, USA, 2012 October 9-12\\[0mm]} }
+			{ \bf \footnotesize\selectfont {\noindent $26^{th}$ Annual NIH Research Festival\\ \noindent Bethesda, MD, USA, 2012 October 9-12\\[0mm]} }
 		\end{flushleft}
 	\end{minipage}
 \end{textblock*}
@@ -317,7 +323,7 @@
 		\begin{center}
 			%{ \bf \Heading \textsc{Multi-Modal and Multi-Camera Attention \\ in Smart Environments\\[10mm]}}
 			\vspace{2cm}
-			{\Authors Eugene Borovikov, Szil\'{a}rd Vajda, Girish Lingappa, Sameer Antani, Mike Gill, George Thoma}
+			{\Authors Eugene Borovikov, Szil\'{a}rd Vajda, Girish Lingappa, Sameer Antani, Michael Gill, George R. Thoma}
 			\vspace{1cm}
 			{	\Institutes \centerline{ Communications Engineering Branch,  Lister Hill National Center for Biomedical Communications, U.S. National Library of Medicine, Bethesda, MD, 20894, USA}}
 		\end{center}
@@ -339,7 +345,7 @@
 
 \input{web_interface}
 
-\vspace{3cm}
+%\vspace{0.5cm}
 
 \input{near_duplicates}
 

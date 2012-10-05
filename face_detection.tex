@@ -8,7 +8,7 @@ Face detection determines the location and the size of a human face in an arbitr
 
 \begin{itemize}
 	  \item low-level image features (Haar, LBP\footnote{T. Ojala, M. Pietikäinen, and D. Harwood, Performance evaluation of texture measures with classification based on Kullback discrimination of distributions, ICPR, 1994})
-	  \item high-level facial landmarks (eye(s), nose, mouth, ear(s), chin, etc.)
+	  \item high-level facial landmarks: eye, nose, mouth, ear, chin, etc.
 	  \item skin color	
 \end{itemize}
 \end{minipage}
@@ -59,7 +59,7 @@ Face detection determines the location and the size of a human face in an arbitr
 
 \begin{itemize}
 	  \item Haar like features  
-	  \item moving window technique
+	  \item multi-scale window technique
 	  \item Ada boost classifier cascade (Viola-Jones\footnote{P. Viola and M. Jones, Rapid Object Detection using a Boosted Cascade of Simple Features, CVPR, 2001})
 \end{itemize}
 \begin{center}
@@ -99,7 +99,7 @@ Face detection determines the location and the size of a human face in an arbitr
 {\vspace*{0.2cm}\noindent\hspace*{0.2cm}{\bf\Titlesize Advantages}\newline}{\vspace{-0.75cm}}
 
 \begin{itemize}
-	  \item high precision skin detection(91\%)  
+	  \item high accuracy for skin detection (91\%)  
 	  \item skin maps focus the face finding
 	  \item enhance skin region intensities
 \end{itemize}
@@ -110,18 +110,18 @@ Face detection determines the location and the size of a human face in an arbitr
 \end{minipage}
 \end{xpsectionbox}
 
-\xpartbox{Experiments}
+\xpartbox{Face Detection Experiments}
 
 \begin{xpsectionbox}{}{}
-With no modifications, Viola-Jones face detector misses about half of the HEPL faces, and about 20\% of the missed ones are typically too small for matching purposes.
+With no modifications, Viola-Jones face detector misses about half of the HEPL faces, and about 20\% of the missed ones are typically too small for matching.
 
 Accuracy results of our FaceFinder
 \begin{itemize}
-	\item HEPL-300: R=75\%, P=83\%, F=79\%
-	\item HEPL-4K (noisy): F=53\%
-	\item PL-700nd+skin: 46\% Recall boost with 22\% FP rate
+	\item HEPL-300 (300 suitable images): R = 75\%, P = 83\%, F = 79\%
+	\item HEPL-4K (4,000 images including noise): F = 53\%
+	\item PL-700nd (700 faces skipped by Viola-Jones) + skin map: 46\% Recall boost, 22\% False Positives rate
 \end{itemize}
-The major factors hurting the accuracy are: Lighting=5.3\%; Quality=8.8\%; Occlusion=10.8\%; Color=0.6\%; Combination=9.5\%; Small Faces=20.8\%; Other=44.2\%.
+The major factors hurting the accuracy are: Lighting = 5.3\%; Low Quality = 8.8\%; Occlusion = 10.8\%; Color = 0.6\%; Combination = 9.5\%; Small Faces = 20.8\%; Other = 44.2\%.
 \end{xpsectionbox}
 
 

@@ -65,11 +65,16 @@ Once the face/profile regions in the image collection are localized and their de
 \end{minipage}
 \begin{minipage}{0.25\linewidth}
 \begin{center}
-	\includegraphics[width=0.5\linewidth]{images/face_match_sift}
+	\includegraphics[width=0.45\linewidth]{images/face_match_sift}
+	
+	{\bf Keypoints correspondence}
 \end{center}
 \end{minipage}
 \begin{minipage}{0.37\linewidth}
+
+\vspace{-1.5cm}
 {\vspace*{0.2cm}\noindent\hspace*{0.2cm}{\bf\Titlesize Improvements}\newline}{\vspace{-0.75cm}}
+
 \begin{itemize}
 	\item re-ranking based on
 	\begin{itemize}
@@ -82,22 +87,26 @@ Once the face/profile regions in the image collection are localized and their de
 \end{minipage}
 \end{xpsectionbox}
 
-\xpartbox{Experiments}
+\xpartbox{Face Matching Experiments}
 
 \begin{xpsectionbox}{}{}
 Our experiments with the annotated HEPL-4K images, and on HEPL-62mod (372 = 62 images with 6 synthetic modifications, e.g. crop, scale and rotate). Accuracy (F-score) figures are reported in the table.
 
+\vspace{0.25cm}
+\begin{center}
 \begin{tabular*}{0.75\textwidth}{@{\extracolsep{\fill}} | c | c | c | c | c | }
-  \hline
-  dataset & HAAR & SIFT & SURF & ORB \\
+ \hline
+  Dataset & HAAR & SIFT & SURF & ORB \\
   \hline
   HEPL-4K & {\bf0.99} & 0.98 & 0.96 & 0.95 \\
   \hline
   HEPL-62mod  & 0.44  & {\bf0.81}  & 0.52 & 0.56 \\
   \hline
 \end{tabular*}
+\end{center}
+\vspace{0.25cm}
 
-We have also experimented with combining the descriptor match distances by using a generalized geometric mean, and found that a combination of HAAR*ORB*SIFT*SURF produce a better F-score (by about 5 percentage points) than either of the individual descriptors. Inclusion of a weak descriptor may hurt the ensemble.
+We have also experimented with combining the descriptor match distances by using a generalized geometric mean, and found that a combination of HAAR*ORB*SIFT*SURF produce a better F-score (by about 5\%) than either of the individual descriptors. Inclusion of a weak descriptor tends to hurt the ensemble.
 \end{xpsectionbox}
 
 %\xpartbox{Automatic Bangla Recognition}
